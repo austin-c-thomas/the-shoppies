@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { callApi } from '../api';
 
+import './Search.css';
+
 const Search = ({ setMovieList }) => {
     const [query, setQuery] = useState('');
     const handleSubmit = async (event) => {
