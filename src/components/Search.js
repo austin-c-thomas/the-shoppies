@@ -4,10 +4,15 @@ import { callApi } from '../api';
 import './Search.css';
 
 const Search = ({ query, setQuery, setMovieList }) => {
-    const handleSubmit = async (event) => {
+    
+    const handleQueryChange = async (event) => {
         event.preventDefault();
+        setQuery(event.target.value);
+
+        const concatQuery = event.target.value.split(' ').join('+')
+
         const params = {
-            query: `s=${query.toLowerCase()}&`,
+            query: `s=${concatQuery.toLowerCase()}&`,
         };
         try {
             const data = await callApi(params);
@@ -22,21 +27,18 @@ const Search = ({ query, setQuery, setMovieList }) => {
     return (
         <section className="search">
             <form 
-                className="search-form"
-                onSubmit={handleSubmit}>
+                className="search-form">
                 <fieldset>
                     <label htmlFor="search-input">Search movie titles</label>
                     <input 
                         type="text"
                         name="search-input"
                         value={query}
-                        onChange={(event) => {
-                            setQuery(event.target.value);
-                        }}/>
+                        onChange={handleQueryChange}/>
                     
-                    <button 
+                    {/* <button 
                         className="primary" 
-                        type="submit">Search</button>
+                        type="submit">Search</button> */}
 
                 </fieldset>
             </form>

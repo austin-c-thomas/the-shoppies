@@ -3,6 +3,7 @@ export const DATA_URL = "http://www.omdbapi.com/?apikey=d18f6cb1&type=movie&"
 
 export const callApi = async ({ query }) => {
     try {
+        console.log('URL: ', DATA_URL + query)
         const response = await fetch(DATA_URL + query);
         const data = await response.json();
 
