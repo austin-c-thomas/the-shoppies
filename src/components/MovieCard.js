@@ -7,11 +7,13 @@ const MoiveCard = ({ variant, movie, nominations, setNominations }) => {
     const [isNominated, setIsNominated] = useState(false);
 
     useEffect(() => {
-        if (nominations && nominations.length > 0) {
+        if (nominations) {
             const isCopy = nominations.find(selectedMovie => selectedMovie.imdbID === movie.imdbID);
-            if (isCopy) {
+            if (isCopy || nominations.length === 5) {
                 setIsNominated(true);
-            };
+            } else {
+                setIsNominated(false);
+            }
         };
     }, [nominations, movie.imdbID]);
 
@@ -25,7 +27,6 @@ const MoiveCard = ({ variant, movie, nominations, setNominations }) => {
         const listCopy = [...nominations];
         const indexToRemove = listCopy.findIndex(selected => selected.imdbID === movie.imdbID);
         listCopy.splice(indexToRemove, 1);
-        setIsNominated(false);
         setNominations(listCopy);
     }
 

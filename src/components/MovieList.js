@@ -5,7 +5,6 @@ import './MovieList.css';
 
 const MovieList = ({ variant, query, movieList, nominations, setNominations }) => {
 
-
     return (
         <>
         {variant === "Results" ?
@@ -14,7 +13,7 @@ const MovieList = ({ variant, query, movieList, nominations, setNominations }) =
         <section className="results">
             <h3>Results for "{query}"</h3>
             <div className="results-list">
-                {movieList.length > 0
+                {movieList && movieList.length > 0
                 ? movieList.map((movie) => {
                     return (
                         <MovieCard 
@@ -35,7 +34,7 @@ const MovieList = ({ variant, query, movieList, nominations, setNominations }) =
         <section className="results">
             <h3>Nominations</h3>
             <div className="results-list">
-                {nominations.length > 0
+                {nominations && nominations.length > 0
                 ? nominations.map((movie) => {
                     return (
                         <MovieCard 

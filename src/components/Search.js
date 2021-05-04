@@ -4,7 +4,6 @@ import { callApi } from '../api';
 import './Search.css';
 
 const Search = ({ query, setQuery, setMovieList }) => {
-    
     const handleQueryChange = async (event) => {
         event.preventDefault();
         setQuery(event.target.value);
