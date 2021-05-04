@@ -1,17 +1,24 @@
+import { useState } from 'react';
 import './App.css';
-import { Search } from './components';
+import { 
+  Search,
+  ResultsList } from './components';
 
 const App = () => {
+  const [movieList, setMovieList] = useState([]);
+
   return (
     <div id="App">
-      {/* <h1>Hello World</h1>
-      <button className="primary">Hello</button> */}
+
       <header>
         <h1>The Shoppies</h1>
       </header>
 
-      <Search />
+      <Search 
+        setMovieList = {setMovieList} />
 
+      <ResultsList 
+        movieList = {movieList} />
     </div>
   );
 };
