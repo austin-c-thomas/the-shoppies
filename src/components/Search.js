@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { callApi } from '../api';
 
 import './Search.css';
 
-const Search = ({ setMovieList }) => {
-    const [query, setQuery] = useState('');
+const Search = ({ query, setQuery, setMovieList }) => {
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log('Query: ', query);
-
         const params = {
             query: `s=${query.toLowerCase()}&`,
         };
-
         try {
             const data = await callApi(params);
             if (data.Search && data.Search.length > 0) {

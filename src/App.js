@@ -5,6 +5,7 @@ import {
   ResultsList } from './components';
 
 const App = () => {
+  const [query, setQuery] = useState('');
   const [movieList, setMovieList] = useState([]);
 
   return (
@@ -15,10 +16,16 @@ const App = () => {
       </header>
 
       <Search 
+        query = {query}
+        setQuery = {setQuery}
         setMovieList = {setMovieList} />
 
-      <ResultsList 
-        movieList = {movieList} />
+      <div className="lists-container">
+        <ResultsList 
+          query = {query}
+          movieList = {movieList} />
+
+      </div>
     </div>
   );
 };

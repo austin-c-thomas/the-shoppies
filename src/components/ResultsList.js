@@ -3,11 +3,11 @@ import MovieCard from './MovieCard';
 
 import './ResultsList.css';
 
-const ResultsList = ({ movieList }) => {
-    console.log('MOVIES: ', movieList);
+const ResultsList = ({ query, movieList }) => {
     return (
         <section className="results">
-            <div className="results-list-wrapper">
+            <h3>Results for "{query}"</h3>
+            <div className="results-list">
                 {movieList.length > 0
                 ? movieList.map((movie) => {
                     return (
@@ -18,6 +18,7 @@ const ResultsList = ({ movieList }) => {
                 })
                 : <div>No results to display.</div>}
             </div>
+
         </section>
     );
 };

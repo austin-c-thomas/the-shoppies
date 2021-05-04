@@ -1,5 +1,4 @@
-export const DATA_URL = "http://www.omdbapi.com/?apikey=d18f6cb1&"
-export const POSTER_URL = "http://img.omdbapi.com/?apikey=d18f6cb1&"
+export const DATA_URL = "http://www.omdbapi.com/?apikey=d18f6cb1&type=movie&"
 
 
 export const callApi = async ({ query }) => {
