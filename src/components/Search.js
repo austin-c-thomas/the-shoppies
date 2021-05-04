@@ -10,10 +10,10 @@ const Search = ({ query, setQuery, setMovieList }) => {
         setQuery(event.target.value);
 
         const concatQuery = event.target.value.split(' ').join('+')
-
         const params = {
             query: `s=${concatQuery.toLowerCase()}&`,
         };
+
         try {
             const data = await callApi(params);
             if (data.Search && data.Search.length > 0) {
@@ -32,13 +32,9 @@ const Search = ({ query, setQuery, setMovieList }) => {
                     <label htmlFor="search-input">Search movie titles</label>
                     <input 
                         type="text"
-                        name="search-input"
+                        id="search-input"
                         value={query}
-                        onChange={handleQueryChange}/>
-                    
-                    {/* <button 
-                        className="primary" 
-                        type="submit">Search</button> */}
+                        onChange={handleQueryChange} />
 
                 </fieldset>
             </form>

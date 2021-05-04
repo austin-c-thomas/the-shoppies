@@ -2,11 +2,12 @@ import { useState } from 'react';
 import './App.css';
 import { 
   Search,
-  ResultsList } from './components';
+  MovieList } from './components';
 
 const App = () => {
   const [query, setQuery] = useState('');
   const [movieList, setMovieList] = useState([]);
+  const [nominations, setNominations] = useState([]);
 
   return (
     <div id="App">
@@ -21,9 +22,18 @@ const App = () => {
         setMovieList = {setMovieList} />
 
       <div className="lists-container">
-        <ResultsList 
+        <MovieList 
+          variant = "Results"
           query = {query}
-          movieList = {movieList} />
+          movieList = {movieList}
+          nominations = {nominations}
+          setNominations = {setNominations}
+           />
+        
+        <MovieList 
+          variant = "Nominations"
+          nominations = {nominations}
+          setNominations = {setNominations} />
 
       </div>
     </div>

@@ -1,0 +1,22 @@
+.search {
+
+}
+
+.search-form fieldset {
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+}
+
+.search-form input {
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+
+.search-form input:focus {
+    border: 2px solid #008060;
+}
