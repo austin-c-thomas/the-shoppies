@@ -27,7 +27,8 @@ const Search = ({ query, setQuery, setMovieList }) => {
     return (
         <section className="search">
             <form 
-                className="search-form">
+                className="search-form"
+                onSubmit={event => event.preventDefault()}>
                 <fieldset>
                     <label htmlFor="search-input">Search movie titles</label>
                     <input 

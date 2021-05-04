@@ -19,6 +19,7 @@ const MovieList = ({ variant, query, movieList, nominations, setNominations }) =
                     return (
                         <MovieCard 
                             key = {movie.imdbID}
+                            variant = "Result"
                             movie = {movie} 
                             nominations = {nominations}
                             setNominations = {setNominations}/>
@@ -39,6 +40,7 @@ const MovieList = ({ variant, query, movieList, nominations, setNominations }) =
                     return (
                         <MovieCard 
                             key = {movie.imdbID}
+                            variant = "Nomination"
                             movie = {movie} 
                             nominations = {nominations}
                             setNominations = {setNominations}/>

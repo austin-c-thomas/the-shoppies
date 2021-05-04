@@ -1,11 +1,20 @@
-.movie-card {
-    display: flex;
-    padding: 10px;
+.result-movie-card {
+    display: grid;
+    grid-template-columns: 50px 1fr 150px;
     border: 1px solid black;
-
 }
 
-.movie-card img {
-    height: 150px;
-    width: 100px;
+.nominated-movie-card {
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    border: 1px solid black;
+}
+
+.result-movie-card img {
+    height: 50px;
+    width: 35px;
+}
+
+.nominated-movie-card img {
+    height: 200px;
 }
