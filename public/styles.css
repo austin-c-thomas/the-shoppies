@@ -1,0 +1,33 @@
+/* Shopify Site Colors
+* GREEN: #004c3f
+* LIGHT GREEN: #008060
+* CREAM: #fbf7ed
+*/
+
+body {
+    background-color: #fbf7ed;
+    font-family: Helvetica, Arial, Lucida, sans-serif
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+button.primary {
+    outline: none;
+    border: none;
+    /* height: 50px;
+    width: 200px; */
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #008060;
+}
+
+button.primary:hover {
+    background-color: #004c3f;
+}
