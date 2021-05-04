@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
+import { callApi } from '../api';
 
 const Search = () => {
     const [query, setQuery] = useState('');
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log('Search initiated');
+        console.log('Query: ', query);
+
+        const params = {
+            query: `s=${query}&`,
+        };
+
+        try {
+            const data = await callApi(params);
+            console.log('Data: ', data);
+        } catch (error) {
+            console.error(error);
+        };
     };
 
     return (
