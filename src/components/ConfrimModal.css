@@ -14,5 +14,36 @@
     top: 10vh;
     bottom: 10vh;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    box-shadow: 1px 1px 10px black;
+    padding: 20px;
     overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.confirm-modal::-webkit-scrollbar {
+    display: none;
+}
+
+.confirm-modal h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+.choices-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px;
+    background-color: rgb(5, 5, 5);
+    box-shadow: inset 0 0 5px black;
+    margin-bottom: 16px;
+}
+
+.disclaimer {
+    margin-top: 8px;
+    font-size: 0.8rem;
 }

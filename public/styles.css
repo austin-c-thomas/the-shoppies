@@ -1,12 +1,24 @@
-/* Shopify Site Colors
-* GREEN: #004c3f
-* LIGHT GREEN: #008060
-* CREAM: #fbf7ed
-*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
 body {
-    background-color: #fbf7ed;
-    font-family: Helvetica, Arial, Lucida, sans-serif
+    background-color: #000;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #008060;
 }
 
 a {
@@ -14,18 +26,49 @@ a {
     color: white;
 }
 
-/* button.primary {
+button.primary {
     outline: none;
     border: none;
-    padding: 5px 10px 5px 10px;
-    border-radius: 5px;
+    padding: 8px 16px 8px 16px;
+    margin: 0px 8px 0px 8px;
+    border-radius: 30px;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
     background-color: #008060;
-} */
+}
 
-/* button.primary:hover {
+button.primary:hover {
     background-color: #004c3f;
-} */
+}
+
+button.primary:disabled {
+    cursor: default;
+    background-color: #777;
+    color: rgb(200, 200, 200);
+}
+
+button.primary:disabled:hover {
+    background-color: #777;
+}
+
+button.primary.small {
+    height: 35px;
+}
+
+button.primary.large {
+    height: 60px;
+    padding: 0 50px 0 50px;
+    font-size: 1.4rem;
+}
+
+.green-text {
+    color: #008060;
+}
+
+.dark-green-text {
+    color: #004c3f;
+    font-size: 1.2rem;
+    vertical-align: top;
+    position: absolute;
+}

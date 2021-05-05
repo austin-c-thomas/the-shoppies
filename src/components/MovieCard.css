@@ -1,20 +1,35 @@
 .result-movie-card {
     display: grid;
-    grid-template-columns: 50px 1fr 150px;
-    border: 1px solid black;
+    grid-template-columns: 80px 1fr 120px;
+    align-items: center;
+    box-shadow: inset 0 0 3px black;
+    margin-bottom: 2px;
+}
+
+.result-movie-card:hover {
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+.result-movie-card img {
+    height: 70px;
+    width: 55px;
 }
 
 .nominated-movie-card {
     display: grid;
-    grid-template-columns: 150px 1fr 150px;
-    border: 1px solid black;
-}
-
-.result-movie-card img {
-    height: 50px;
-    width: 35px;
+    grid-template-columns: 120px 1fr 120px;
+    align-items: center;
+    box-shadow: inset 0 0 3px black;
+    background-color: black;
+    color: white;
+    margin: 2.5px
 }
 
 .nominated-movie-card img {
-    height: 200px;
+    height: 150px;
+    width: 105px;
+}
+
+.result-movie-card p, .nominated-movie-card p {
+    margin: 0 12px 0 12px;
 }

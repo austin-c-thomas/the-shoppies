@@ -1,4 +1,22 @@
+#App {
+  padding: 50px;
+}
+
 .lists-container {
   display: grid;
   grid-template-columns: 3fr 2fr;
+  grid-gap: 30px;
+}
+
+@media screen and (max-width: 1080px) {
+  #App {
+    padding: 4vh;
+  }
+
+
+  .lists-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
 }

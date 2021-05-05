@@ -57,35 +57,39 @@ const App = () => {
     <div id="App">
 
       <header>
-        <h1>The Shoppies</h1>
+        <span className="dark-green-text">The</span>
+        <h1>Shoppies</h1>
       </header>
 
-      <Search 
-        query = {query}
-        setQuery = {setQuery}
-        setMovieList = {setMovieList} />
-
-      <div className="lists-container">
-        <MovieList 
-          variant = "Results"
+      <main>
+        <Search 
           query = {query}
-          movieList = {movieList}
-          nominations = {nominations}
-          setNominations = {setNominations}
-           />
-        
-        <MovieList 
-          variant = "Nominations"
+          setQuery = {setQuery}
+          setMovieList = {setMovieList} />
+
+        <div className="lists-container">
+          <MovieList 
+            variant = "Results"
+            query = {query}
+            movieList = {movieList}
+            nominations = {nominations}
+            setNominations = {setNominations}
+            />
+          
+          <MovieList 
+            variant = "Nominations"
+            nominations = {nominations}
+            setNominations = {setNominations} />
+        </div>
+
+        {nominations.length === 5 ?
+        <ConfirmModal
           nominations = {nominations}
           setNominations = {setNominations} />
-      </div>
-
-      {nominations.length === 5 ?
-      <ConfirmModal
-        nominations = {nominations}
-        setNominations = {setNominations} />
-      : ''
-      }
+        : ''
+        }
+      </main>
+      
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import { Movie } from '@material-ui/icons';
 import React, { useEffect, useState } from 'react';
 
 import './MovieCard.css';
@@ -28,7 +29,7 @@ const MoiveCard = ({ variant, movie, nominations, setNominations }) => {
         const indexToRemove = listCopy.findIndex(selected => selected.imdbID === movie.imdbID);
         listCopy.splice(indexToRemove, 1);
         setNominations(listCopy);
-    }
+    };
 
     return (
         <>
@@ -36,16 +37,19 @@ const MoiveCard = ({ variant, movie, nominations, setNominations }) => {
 
         <div className="result-movie-card">
 
+            {movie.Poster !== "N/A" ? 
             <img 
                 src={movie.Poster} 
                 alt={movie.Title} />
+            : <Movie />
+            }
             
-            <p>{movie.Title}({movie.Year})</p>
+            <p>{movie.Title} ({movie.Year})</p>
 
             <button 
-                className="primary"
+                className="primary small"
                 disabled={isNominated ? true : false}
-                onClick={handleAdd}>Nominate</button>
+                onClick={handleAdd}>{isNominated ? 'Nominated!' : 'Nominate'}</button>
         </div>
 
         : variant === "Nomination" ?
@@ -56,10 +60,10 @@ const MoiveCard = ({ variant, movie, nominations, setNominations }) => {
                 src={movie.Poster} 
                 alt={movie.Title} />
             
-            <p>{movie.Title}({movie.Year})</p>
+            <p>{movie.Title} ({movie.Year})</p>
 
             <button 
-                className="primary"
+                className="primary small"
                 onClick={handleRemove}>Remove</button>
         </div>
         : ''}

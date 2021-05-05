@@ -29,10 +29,11 @@ const Search = ({ query, setQuery, setMovieList }) => {
                 className="search-form"
                 onSubmit={event => event.preventDefault()}>
                 <fieldset>
-                    <label htmlFor="search-input">Search movie titles</label>
+                    <label htmlFor="search-input">Movie Title</label>
                     <input 
                         type="text"
                         id="search-input"
+                        placeholder="Search movie titles..."
                         value={query}
                         onChange={handleQueryChange} />
 
