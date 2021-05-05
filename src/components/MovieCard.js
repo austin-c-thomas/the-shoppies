@@ -56,9 +56,12 @@ const MoiveCard = ({ variant, movie, nominations, setNominations }) => {
         
         <div className="nominated-movie-card">
 
+            {movie.Poster !== "N/A" ? 
             <img 
                 src={movie.Poster} 
                 alt={movie.Title} />
+            : <Movie />
+            }
             
             <p>{movie.Title} ({movie.Year})</p>
 

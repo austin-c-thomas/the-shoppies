@@ -15,6 +15,7 @@ const ConfirmModal = ({ nominations, setNominations, setMovieList, setQuery }) =
         setNominations([]);
         setMovieList([]);
         setQuery('');
+        localStorage.clear();
     };
 
     return (
@@ -23,7 +24,7 @@ const ConfirmModal = ({ nominations, setNominations, setMovieList, setQuery }) =
 
                 {confirmStage === 1 ?
                 <>
-                <h1>Your 5 Nominations:</h1>
+                    <h1>Your 5 Nominations:</h1>
 
                     <div className="choices-container">
                         {nominations.map((movie) => {
@@ -53,14 +54,14 @@ const ConfirmModal = ({ nominations, setNominations, setMovieList, setQuery }) =
                     <div className="choices-gallery">
                         {nominations.map((movie) => {
                             return (
-                                <>
+                                <React.Fragment key={movie.imdbID}>
                                 {movie.Poster !== "N/A" ? 
                                     <img 
                                         src={movie.Poster} 
                                         alt={movie.Title} />
                                     : <Movie />
                                     }
-                                </>
+                                </React.Fragment>
                             )
                         })}
                     </div>

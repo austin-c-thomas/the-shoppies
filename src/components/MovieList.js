@@ -47,7 +47,7 @@ const MovieList = ({ variant, query, movieList, nominations, setNominations }) =
         <section className="nominations">
             {nominations.length > 0 ?
             <>
-                <h2>My Nominations</h2>
+                <h2>My Nominations <span className="green-text">({nominations.length}/5)</span></h2>
                 <div className="nomination-list">
                     {nominations.map((movie) => {
                         return (
