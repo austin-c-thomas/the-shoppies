@@ -15,7 +15,7 @@ const MovieList = ({ variant, query, movieList, nominations, setNominations }) =
         <section className="results">
             {query.length > 0 ?
             <>
-                <h3>Showing results for <span className="green-text">{query}</span></h3>
+                <h2>Showing results for <span className="green-text">{query}</span></h2>
                 <div className="results-list">
                     {movieList && movieList.length > 0
                     ? movieList.map((movie) => {
@@ -47,7 +47,7 @@ const MovieList = ({ variant, query, movieList, nominations, setNominations }) =
         <section className="nominations">
             {nominations.length > 0 ?
             <>
-                <h3>My Nominations</h3>
+                <h2>My Nominations</h2>
                 <div className="nomination-list">
                     {nominations.map((movie) => {
                         return (

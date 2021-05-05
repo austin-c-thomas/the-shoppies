@@ -85,7 +85,9 @@ const App = () => {
         {nominations.length === 5 ?
         <ConfirmModal
           nominations = {nominations}
-          setNominations = {setNominations} />
+          setNominations = {setNominations}
+          setMovieList = {setMovieList}
+          setQuery = {setQuery} />
         : ''
         }
       </main>

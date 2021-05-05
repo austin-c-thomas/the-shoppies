@@ -1,6 +1,6 @@
 .results, .nominations {
-    margin-top: 20px;
-    height: 60vh;
+    margin-top: 40px;
+    max-height: 60vh;
 }
 
 .results-list, .nomination-list {

@@ -13,10 +13,11 @@
     padding: 4vh;
   }
 
-
   .lists-container {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 30px;
+    grid-gap: 30px; */
+    display: flex;
+    flex-direction: column;
   }
 }
